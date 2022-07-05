@@ -25,14 +25,14 @@ requirements:
     - aicsimageio >=4.0.5
     - dask-core
     - itk
-    - itk-meshtopolydata
     - itkwidgets
     - jupyter
     - matplotlib-base
+    - napari
     - numpy >=1.15.1
     - pandas >=0.23.4
     - python >=3.7
-    - scikit-image >=0.18.0
+    - scikit-image >=0.18.0,<0.19.0
     - scipy >=1.1.0
 
 test:
