@@ -1,5 +1,5 @@
 {% set name = "aicssegmentation" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aicssegmentation-{{ version }}.tar.gz
-  sha256: 65a6e695ef0c5d4afe224e31259ae6cb8144aa474952a13c99d7426b2cc3f87b
+  sha256: 5690038476079ca60617e8d155cd726f0568c72e5c181e93c14c7e8d9c35b738
 
 build:
   entry_points:
@@ -25,14 +25,14 @@ requirements:
     - aicsimageio >=4.0.5
     - dask-core
     - itk
-    - itk-meshtopolydata
     - itkwidgets
     - jupyter
     - matplotlib-base
+    - napari
     - numpy >=1.15.1
     - pandas >=0.23.4
     - python >=3.7
-    - scikit-image >=0.18.0
+    - scikit-image >=0.18.0,<0.19.0
     - scipy >=1.1.0
 
 test:
