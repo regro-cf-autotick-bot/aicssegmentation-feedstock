@@ -1,5 +1,5 @@
 {% set name = "aicssegmentation" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aicssegmentation-{{ version }}.tar.gz
-  sha256: 5690038476079ca60617e8d155cd726f0568c72e5c181e93c14c7e8d9c35b738
+  sha256: ed01b749bb45c7a579db4108744d5264d4a9d26043601797e4ace1fc076a6185
 
 build:
   entry_points:
