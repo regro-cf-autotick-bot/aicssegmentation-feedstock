@@ -1,5 +1,5 @@
 {% set name = "aicssegmentation" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aicssegmentation-{{ version }}.tar.gz
-  sha256: ed01b749bb45c7a579db4108744d5264d4a9d26043601797e4ace1fc076a6185
+  sha256: b9d7a8f4a84177e776653248bd5343e37856d5bbeba75d3fdf34774bc586c318
 
 build:
   entry_points:
@@ -32,7 +32,7 @@ requirements:
     - numpy >=1.15.1
     - pandas >=0.23.4
     - python >=3.7
-    - scikit-image >=0.18.0,<0.19.0
+    - scikit-image
     - scipy >=1.1.0
 
 test:
@@ -46,10 +46,11 @@ test:
     - pip
 
 about:
-  home: https://github.com/AllenCell/aicssegmentation
+  home: https://pypi.org/project/aicssegmentation
   summary: Part 1 of Allen Cell and Structure Segmenter
   license: BSD-2-Clause
   license_file: LICENSE
+  dev_url: https://github.com/AllenCell/aicssegmentation
 
 extra:
   recipe-maintainers:
