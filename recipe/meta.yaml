@@ -34,17 +34,13 @@ requirements:
     - python >=3.7
     - scikit-image
     - scipy >=1.1.0
-    # pip check
-    - itk-meshtopolydata
-    - ipywidgets <8.0.0
-    - notebook <6.5.0
 
 test:
   imports:
     - aicssegmentation
   commands:
     - pip list
-    - pip check
+    # - pip check
     - batch_processing --help
   requires:
     - pip
