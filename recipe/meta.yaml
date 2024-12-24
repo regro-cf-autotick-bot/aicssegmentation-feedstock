@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aicssegmentation-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aicssegmentation-{{ version }}.tar.gz
   sha256: b9d7a8f4a84177e776653248bd5343e37856d5bbeba75d3fdf34774bc586c318
 
 build:
@@ -14,13 +14,13 @@ build:
     - batch_processing=aicssegmentation.bin.batch_processing:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - pytest-runner >=5.2
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - aicsimageio >=4.0.5
     - dask-core
@@ -31,7 +31,7 @@ requirements:
     - napari
     - numpy >=1.15.1
     - pandas >=0.23.4
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-image
     - scipy >=1.1.0
 
@@ -44,6 +44,7 @@ test:
     - batch_processing --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/aicssegmentation
